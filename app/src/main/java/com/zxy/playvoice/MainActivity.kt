@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun initView() {
-
+       // do something
     }
 
 
