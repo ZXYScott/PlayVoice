@@ -1,0 +1,63 @@
+
+
+ext {
+
+    word = "World HHHH"
+
+    words = "World is word"
+}
+
+def coshh = {def name2, def age ->
+    def name1;
+    def age2;
+    println("name is ${ name } and age is ${age}")
+}
+
+def cos2 = {
+    println("name is cos2")
+}
+
+task Hello {
+    println "Hello World"
+    sayHello()
+    printFileName()
+    loopforName()
+    className(User)
+    cosDefine(coshh)
+}
+
+
+def sayHello() {
+    println " say Hello "
+}
+
+def printFileName() {
+    println getRootDir()
+
+    println getRootProject()
+}
+
+def loopforName() {
+
+    def files = getRootDir().listFiles()
+
+    if (files != null) {
+        for(i in 0..<files.length) {
+            println("File Name is ${files[i].name}")
+        }
+    }
+}
+
+def className(Class aClass) {
+    println(" class : ${ aClass}")
+}
+
+class User {
+
+}
+
+def cosDefine(Closure closure) {
+    closure("zxy", 25)
+    println("XIXI")
+}
+
